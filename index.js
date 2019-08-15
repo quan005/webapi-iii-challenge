@@ -1,21 +1,5 @@
-// Import Express
-const express = require("express");
+const server = require('./server.js');
 
- // Routes
-const userRoutes = require("./routes/userRoutes.js");
-const postRoutes = require("./routes/postRoutes.js");
-
- // Initialize Express
-const server = express();
-
- // Middleware
-server.use(express.json());
-
- // Use Routes
-server.use("/api/users", userRoutes);
-server.use("/api/posts", postRoutes);
-
- // Run Server
 server.listen(4000, () => {
-  console.log("server running");
+  console.log('\n* Server Running on http://localhost:4000 *\n');
 });
